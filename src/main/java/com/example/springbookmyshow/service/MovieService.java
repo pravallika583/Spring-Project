@@ -34,9 +34,15 @@ public class MovieService {
     }
     //delete
 
-//    public void update(MovieDto movieDto) {
-//        movieRepository.save(movieDto);
-//    }
+    public void update(MovieDto movieDto) {
+        Movie movie = new Movie();
+        movie.setId(movieDto.getId());
+        movie.setImg(movieDto.getImg());
+        movie.setMoviename(movieDto.getMoviename());
+        movie.setCategory(movieDto.getCategory());
+        movieRepository.save(movie);
+
+    }
     public void delete(Long id) {
         movieRepository.deleteById(id);
     }

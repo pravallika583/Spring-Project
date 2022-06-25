@@ -1,6 +1,15 @@
 package com.example.springbookmyshow.dto;
 
 public class MovieDto {
+    private Long id;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     private String img;
     private String  moviename;

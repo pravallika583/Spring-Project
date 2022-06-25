@@ -33,11 +33,11 @@ public class MovieContoller {
         return new ResponseEntity<>(movieService.getMovieById(id),HttpStatus.OK);
     }
 
-//    @PutMapping("/update")
-//    public ResponseEntity update(@RequestBody MovieDto moviedto) {
-//        movieService.update(moviedto);
-//        return new ResponseEntity(HttpStatus.OK);
-//    }
+    @PutMapping("/update")
+    public ResponseEntity update(@RequestBody MovieDto moviedto) {
+        movieService.update(moviedto);
+        return new ResponseEntity(HttpStatus.OK);
+    }
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity delete(@PathVariable Long id) {
